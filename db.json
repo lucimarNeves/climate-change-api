@@ -1,0 +1,16 @@
+{
+    "news": [
+        {
+            "id": 1,
+            "title": "primeira"
+        },
+        {
+            "id": 2,
+            "title": "segunda"
+        }, 
+        {
+            "id": 3,
+            "title": "terceira"
+        }
+    ]
+}
