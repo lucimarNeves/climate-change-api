@@ -5,9 +5,6 @@ const PORT = process.env.PORT || 8000
 const express = require('express')
 const axios = require ('axios')
 const cheerie = require ('cheerio')
-const { response } = require('express')
-const e = require('cors')
-
 const app = express()
 
 const newspapers = [
