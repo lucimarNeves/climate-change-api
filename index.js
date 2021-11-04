@@ -1,3 +1,5 @@
+
+
 const PORT = process.env.PORT || 3000
 
 const express = require('express')
@@ -101,27 +103,32 @@ newspapers.forEach(newspaper =>{
 
 })
 
-app.get('/news', (req, res)=> {
+ app.get('/', (req, res)=> {
+   
+    res.json('Welcome to my Climate Change News API')
+})
 
+
+app.get('/news', (req, res)=> {
     res.json(articles)
 
-    // axios.get('https://www.theguardian.com/environment/climate-crisis')
-    // .then((response) =>{
-    //     const html = response.data
-    //     const $ = cheerie.load(html)
+//     // axios.get('https://www.theguardian.com/environment/climate-crisis')
+//     // .then((response) =>{
+//     //     const html = response.data
+//     //     const $ = cheerie.load(html)
 
-    //     $('a:contains("climate")', html).each(function(){
+//     //     $('a:contains("climate")', html).each(function(){
 
-    //        const title = $(this).text()
-    //        const url = $(this).attr('href')
-    //        articles.push({
-    //            title,
-    //            url
-    //        })
-    //     })
-    //     res.json(articles)
-    // }).catch((err) => console.log(err))
-})
+//     //        const title = $(this).text()
+//     //        const url = $(this).attr('href')
+//     //        articles.push({
+//     //            title,
+//     //            url
+//     //        })
+//     //     })
+//     //     res.json(articles)
+//     // }).catch((err) => console.log(err))
+ })
 
 app.get('/news/:newspaperId', (req, res)=>{
    const newspaperId =  req.params.newspaperId
